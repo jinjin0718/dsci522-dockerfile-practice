@@ -1,5 +1,7 @@
 FROM quay.io/jupyter/minimal-notebook:afe30f0c9ad8
 
+USER root
+
 COPY conda-linux-64.lock /tmp/conda-linux-64.lock
 
 RUN conda update --quiet --file /tmp/conda-linux-64.lock \
